@@ -1,4 +1,4 @@
-package yevtukh.anton.database;
+package yevtukh.anton.database.initializers;
 
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -1,12 +1,14 @@
 package yevtukh.anton.database;
 
-import yevtukh.anton.model.Flat;
-import yevtukh.anton.model.FlatsDao;
+import yevtukh.anton.database.initializers.DbInitialiser;
+import yevtukh.anton.database.initializers.MySqlInitializer;
+import yevtukh.anton.database.initializers.PostgreSqlInitializer;
+import yevtukh.anton.model.dao.implementations.mysql.MySqlFlatsDao;
+import yevtukh.anton.model.dao.implementations.postgresql.PostgreSqlFlatsDao;
+import yevtukh.anton.model.dao.interfaces.FlatsDao;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.util.List;
 import java.util.Properties;
 
 /**
@@ -53,7 +55,7 @@ public class DbWorker {
         try {
             environmentConfig = Integer.parseInt(properties.getProperty("db.environment_config")) == 1 ? true : false;
         } catch (IllegalArgumentException | NullPointerException e) {
-            environmentConfig = true;
+            environmentConfig = false;
         }
 
         if (!environmentConfig) {
@@ -79,7 +81,14 @@ public class DbWorker {
 
     public FlatsDao createFlatsDao()
             throws SQLException {
-        return new FlatsDao(getConnection());
+        switch (DBMS_NAME) {
+            case "mysql":
+                return new MySqlFlatsDao(getConnection());
+            case "postgresql":
+                return new PostgreSqlFlatsDao(getConnection());
+            default:
+                throw new SQLException("Database management system is not supported");
+        }
     }
 
     public void fillDb()

@@ -2,6 +2,7 @@ package yevtukh.anton.controllers;
 
 import yevtukh.anton.database.DbWorker;
 import yevtukh.anton.model.*;
+import yevtukh.anton.model.dao.interfaces.FlatsDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

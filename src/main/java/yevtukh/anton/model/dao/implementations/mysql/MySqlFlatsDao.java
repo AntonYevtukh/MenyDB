@@ -1,4 +1,9 @@
-package yevtukh.anton.model;
+package yevtukh.anton.model.dao.implementations.mysql;
+
+import yevtukh.anton.model.District;
+import yevtukh.anton.model.Flat;
+import yevtukh.anton.model.SearchParameters;
+import yevtukh.anton.model.dao.interfaces.FlatsDao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,26 +15,24 @@ import java.util.List;
 /**
  * Created by Anton on 14.10.2017.
  */
-public class FlatsDao {
+public class MySqlFlatsDao implements FlatsDao {
 
     private final Connection connection;
 
-    public FlatsDao(Connection connection) {
+    public MySqlFlatsDao(Connection connection) {
         this.connection = connection;
     }
 
     public void insertFlat(Flat flat)
             throws SQLException {
         try(PreparedStatement preparedStatement = connection.prepareStatement(
-                "INSERT INTO Flats (district, address, rooms, area, price) VALUES ('"
-                        //Костыль, позволяющий этому запросу работать и в MySql и в PostgreSQL т.к.
-                        //для последнего надо (VALUES (CAST(? AS districts), ?, ?, ?, ?) при использовании setString
-                        + flat.getDistrict().name() + "', ?, ?, ?, ?)"
+                "INSERT INTO Flats (district, address, rooms, area, price) VALUES (?, ?, ?, ?, ?)"
         )) {
-            preparedStatement.setString(1, flat.getAddress());
-            preparedStatement.setInt(2, flat.getRooms());
-            preparedStatement.setInt(3, flat.getArea());
-            preparedStatement.setInt(4, flat.getPrice());
+            preparedStatement.setString(1, flat.getDistrict().name());
+            preparedStatement.setString(2, flat.getAddress());
+            preparedStatement.setInt(3, flat.getRooms());
+            preparedStatement.setInt(4, flat.getArea());
+            preparedStatement.setInt(5, flat.getPrice());
             preparedStatement.executeUpdate();
         }
     }
@@ -73,7 +76,7 @@ public class FlatsDao {
         }
     }
 
-    public List<Flat> getFlatsFromResultSet(ResultSet resultSet)
+    private List<Flat> getFlatsFromResultSet(ResultSet resultSet)
             throws SQLException {
         List<Flat> flats = new ArrayList<>();
         while (resultSet.next()) {

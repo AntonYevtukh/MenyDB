@@ -21,7 +21,7 @@ public enum District {
     }
 
     public static String toSqlEnumString() {
-        StringJoiner stringJoiner = new StringJoiner("', '", " ENUM ('", "') ");
+        StringJoiner stringJoiner = new StringJoiner("', '", " ('", "') ");
         for (District district : values())
             stringJoiner.add(district.name());
         return stringJoiner.toString();
