@@ -1,0 +1,10 @@
+yevtukh\anton\database\MySqlInitializer.class
+yevtukh\anton\database\DbWorker.class
+yevtukh\anton\model\FlatsDao.class
+yevtukh\anton\model\SearchParameters.class
+yevtukh\anton\controllers\FlatsController.class
+yevtukh\anton\model\District.class
+yevtukh\anton\model\Flat.class
+yevtukh\anton\database\PostgreSqlInitializer.class
+yevtukh\anton\database\DbInitialiser.class
+yevtukh\anton\model\FlatsContextListener.class

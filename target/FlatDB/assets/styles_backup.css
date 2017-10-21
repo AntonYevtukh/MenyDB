@@ -1,0 +1,188 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #3B5998;
+    border-width: 0px;
+    border-bottom: 1px solid #303030;
+}
+
+.title {
+    font-size: 32px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    right:0;
+    text-align: center;
+    vertical-align: middle;
+    margin: 9px 0 0 0;
+    color: whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:50px;
+    position: relative;
+    background-color: #3B5998;
+    border-width: 0px;
+    border-top: 1px solid #303030;
+}
+
+.main_area{
+    position: relative;
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right:0;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.content{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    right: 0;
+    left: 0;
+    padding-bottom: 40px;
+}
+
+label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 5px 5px;
+    width: 16%;
+    font-weight: 700;
+    color: #3B5998;
+}
+
+input, select {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30%;
+    font-weight: 700;
+    border: 2px solid #3B5998;
+    margin: 5px 5px;
+    height: 24px;
+    padding-left: 5px;
+}
+
+input:active, input:focus, select:active, select:focus {
+    box-shadow: #3B5998 2px;
+}
+
+.button {
+    height: 24px;
+    width: 100px;
+    display: inline-block;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    color: whitesmoke;
+    background-color: #3B5998;
+}
+
+.button:hover, button:focus, button:active {
+    box-shadow: #3B5998 2px;
+    cursor: hand;
+}
+
+.form_container, .table_container {
+    width: 100%;
+}
+
+.search_form {
+    width: 100%;
+}
+
+.table_container {
+    margin-top: 10px;
+}
+
+table {
+    border: 2px solid #3B5998;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #3B5998;
+}
+
+th {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #3B5998;
+    color: whitesmoke;
+}
+
+.find, .add {
+    width: auto;
+    padding: 5px;
+    border: 2px solid #3B5998;
+    margin-bottom: 20px;
+}
+
+.success {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    height: 36px;
+    border: 2px solid rgba(38, 106, 46, 1);
+    background-color: rgba(38, 106, 46, 0.25);
+    color: rgba(38, 106, 46, 1);
+}
+
+.error {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    height: 36px;
+    border: 2px solid rgba(178, 34, 34, 1);
+    background-color: rgba(178, 34, 34, 0.25);
+    color: rgba(178, 34, 34, 1);
+}
+
