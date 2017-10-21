@@ -88,11 +88,10 @@ public class FlatsController extends HttpServlet {
             req.setAttribute("success_message", "Flats successfully found");
             req.setAttribute("flats", flats);
         } catch (SQLException e) {
-            req.setAttribute("error_message", "Internal SQL error");
+            req.setAttribute("error_message", "Internal SQL error" + e.getMessage());
             System.err.println("Unable to get Flats");
             e.printStackTrace();
         }
-        req.setAttribute("db_worker", DbWorker.getInstance());
         req.getRequestDispatcher("/WEB-INF/views/flats.jsp").forward(req, resp);
     }
 

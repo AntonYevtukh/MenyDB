@@ -99,19 +99,7 @@ public class DbWorker {
             case "postgresql":
                 return new PostgreSqlInitializer();
             default:
-                throw new RuntimeException("Database management system is not supported");
+                throw new SQLException("Database management system is not supported");
         }
-    }
-
-    public String getDB_CONNECTION() {
-        return DB_CONNECTION;
-    }
-
-    public String getDB_USER() {
-        return DB_USER;
-    }
-
-    public String getDB_PASSWORD() {
-        return DB_PASSWORD;
     }
 }
