@@ -1,5 +1,6 @@
 yevtukh\anton\database\MySqlInitializer.class
 yevtukh\anton\database\DbWorker.class
+yevtukh\anton\database\InitData.class
 yevtukh\anton\model\FlatsDao.class
 yevtukh\anton\model\SearchParameters.class
 yevtukh\anton\controllers\FlatsController.class
