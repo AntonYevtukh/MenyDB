@@ -92,6 +92,7 @@ public class FlatsController extends HttpServlet {
             System.err.println("Unable to get Flats");
             e.printStackTrace();
         }
+        req.setAttribute("db_worker", DbWorker.getInstance());
         req.getRequestDispatcher("/WEB-INF/views/flats.jsp").forward(req, resp);
     }
 

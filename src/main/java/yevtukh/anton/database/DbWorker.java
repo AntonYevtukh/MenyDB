@@ -39,9 +39,6 @@ public class DbWorker {
         Properties properties = new Properties();
         properties.load(inputStream);
 
-        DB_CONNECTION = properties.getProperty("db.url");
-        DB_USER = properties.getProperty("db.user");
-        DB_PASSWORD = properties.getProperty("db.password");
         DBMS_NAME = properties.getProperty("dbms.name");
 
         boolean drop;
@@ -51,6 +48,23 @@ public class DbWorker {
             drop = true;
         }
         DROP = drop;
+
+        boolean environmentConfig;
+        try {
+            environmentConfig = Integer.parseInt(properties.getProperty("db.environment_config")) == 1 ? true : false;
+        } catch (IllegalArgumentException | NullPointerException e) {
+            environmentConfig = true;
+        }
+
+        if (environmentConfig) {
+            DB_CONNECTION = properties.getProperty("db.url");
+            DB_USER = properties.getProperty("db.user");
+            DB_PASSWORD = properties.getProperty("db.password");
+        } else {
+            DB_CONNECTION = System.getenv("JDBC_DATABASE_URL");
+            DB_USER = System.getenv("JDBC_DATABASE_USERNAME");
+            DB_PASSWORD = System.getenv("JDBC_DATABASE_PASSWORD");
+        }
     }
 
     public void initDB()
@@ -87,5 +101,17 @@ public class DbWorker {
             default:
                 throw new RuntimeException("Database management system is not supported");
         }
+    }
+
+    public String getDB_CONNECTION() {
+        return DB_CONNECTION;
+    }
+
+    public String getDB_USER() {
+        return DB_USER;
+    }
+
+    public String getDB_PASSWORD() {
+        return DB_PASSWORD;
     }
 }

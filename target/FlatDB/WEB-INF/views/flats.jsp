@@ -15,6 +15,9 @@
     <%@ include file="header.jsp"%>
     <div class="main_area">
         <div class="content">
+            <h2>${db_worker.getDB_CONNECTION()}</h2>
+            <h2>${db_worker.getDB_USER()}</h2>
+            <h2>${db_worker.getDB_PASSWORD()}</h2>
             <form class="search_form" method="POST">
                 <div class="find">
                     <label class="input_label">District</label>
