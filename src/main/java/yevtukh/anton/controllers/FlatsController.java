@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.StringJoiner;
 
 /**
  * Created by Anton on 14.10.2017.
@@ -88,7 +89,11 @@ public class FlatsController extends HttpServlet {
             req.setAttribute("success_message", "Flats successfully found");
             req.setAttribute("flats", flats);
         } catch (SQLException e) {
-            req.setAttribute("error_message", "Internal SQL error" + e.getMessage());
+
+            StringJoiner stringJoiner = new StringJoiner("\n");
+            for (StackTraceElement element : e.getStackTrace())
+                stringJoiner.add(element.toString());
+            req.setAttribute("error_message", "Internal SQL error" + e.getMessage() + "\n" + stringJoiner.toString());
             System.err.println("Unable to get Flats");
             e.printStackTrace();
         }

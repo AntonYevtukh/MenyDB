@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c00f9423-a231-4ef0-867b-223e97e87159" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db.properties" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -70,8 +70,8 @@
       <file leaf-file-name="FlatsDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/FlatsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="99" lean-forward="false" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
+            <state relative-caret-position="51">
+              <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
               <folding>
                 <marker date="1508261203569" expanded="true" signature="570:925" ph="INSERT INTO Flats... " />
                 <marker date="1508261203569" expanded="true" signature="1588:1783" ph="SELECT * FRO... Flats" />
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlatsController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlatsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="90" column="83" lean-forward="false" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
+            <state relative-caret-position="322">
+              <caret line="95" column="116" lean-forward="false" selection-start-line="95" selection-start-column="116" selection-end-line="95" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -177,8 +177,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/postgresql.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flats.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbWorker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
       </list>
     </option>
   </component>
@@ -1070,7 +1070,7 @@
       <workItem from="1508260689245" duration="11350000" />
       <workItem from="1508322486614" duration="1773000" />
       <workItem from="1508324627449" duration="284000" />
-      <workItem from="1508506039831" duration="22847000" />
+      <workItem from="1508506039831" duration="23362000" />
     </task>
     <task id="LOCAL-00001" summary="Flats first commit">
       <created>1508568360885</created>
@@ -1083,7 +1083,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98514000" />
+    <option name="totallyTimeSpent" value="99029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -1492,18 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/FlatsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="99" lean-forward="false" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
-          <folding>
-            <marker date="1508261203569" expanded="true" signature="570:925" ph="INSERT INTO Flats... " />
-            <marker date="1508261203569" expanded="true" signature="1588:1783" ph="SELECT * FRO... Flats" />
-            <marker date="1508261203569" expanded="true" signature="2800:2819" ph="SELECT * FRO... Flats" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flats.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -1544,18 +1532,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="90" column="83" lean-forward="false" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/FlatsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <marker date="1508261203569" expanded="true" signature="570:925" ph="INSERT INTO Flats... " />
+            <marker date="1508261203569" expanded="true" signature="1588:1783" ph="SELECT * FRO... Flats" />
+            <marker date="1508261203569" expanded="true" signature="2800:2819" ph="SELECT * FRO... Flats" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="95" column="116" lean-forward="false" selection-start-line="95" selection-start-column="116" selection-end-line="95" selection-end-column="116" />
           <folding />
         </state>
       </provider>
