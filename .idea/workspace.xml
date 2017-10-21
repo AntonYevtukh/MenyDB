@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c00f9423-a231-4ef0-867b-223e97e87159" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db.properties" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -130,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlatsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlatsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="586">
               <caret line="92" column="66" lean-forward="false" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -207,8 +206,8 @@
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/District.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/PostgreSqlInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/postgresql/PostgreSqlFlatsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
       </list>
     </option>
   </component>
@@ -1259,7 +1258,7 @@
       <workItem from="1508260689245" duration="11350000" />
       <workItem from="1508322486614" duration="1773000" />
       <workItem from="1508324627449" duration="284000" />
-      <workItem from="1508506039831" duration="31976000" />
+      <workItem from="1508506039831" duration="32107000" />
     </task>
     <task id="LOCAL-00001" summary="Flats first commit">
       <created>1508568360885</created>
@@ -1272,7 +1271,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107643000" />
+    <option name="totallyTimeSpent" value="107774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -1760,21 +1759,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="92" column="66" lean-forward="false" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="92" column="66" lean-forward="false" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
