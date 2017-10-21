@@ -90,11 +90,7 @@ public class FlatsController extends HttpServlet {
             req.setAttribute("success_message", "Flats successfully found");
             req.setAttribute("flats", flats);
         } catch (SQLException e) {
-
-            StringJoiner stringJoiner = new StringJoiner("\n");
-            for (StackTraceElement element : e.getStackTrace())
-                stringJoiner.add(element.toString());
-            req.setAttribute("error_message", "Internal SQL error" + e.getMessage() + "\n" + stringJoiner.toString());
+            req.setAttribute("error_message", "Internal SQL error");
             System.err.println("Unable to get Flats");
             e.printStackTrace();
         }

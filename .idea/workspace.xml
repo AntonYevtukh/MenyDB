@@ -2,58 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c00f9423-a231-4ef0-867b-223e97e87159" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/postgresql/PostgreSqlFlatsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/interfaces/FlatsDao.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/db.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/herokudb.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/mysql.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/postgresql.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/controllers/FlatsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/database/DbInitialiser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/database/DbWorker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/database/InitData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/database/MySqlInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/database/PostgreSqlInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/model/District.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/model/Flat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/model/FlatsContextListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/model/FlatsDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/classes/yevtukh/anton/model/SearchParameters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/lib/mysql-connector-java-5.1.39.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/views/flats.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/views/footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/views/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/views/meta.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/assets/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/assets/styles_backup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/FlatDB/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/controllers/FlatsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/database/DbInitialiser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/database/DbWorker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/database/InitData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/database/MySqlInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/database/PostgreSqlInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/model/FlatsContextListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/model/FlatsDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/dependency/webapp-runner.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/yevtukh/anton/model/District.class" afterPath="$PROJECT_DIR$/target/classes/yevtukh/anton/model/District.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbWorker.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbWorker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/District.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/District.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db.properties" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/db.properties" afterPath="$PROJECT_DIR$/target/classes/db.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbInitialiser.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/DbInitialiser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/MySqlInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/MySqlInitializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/PostgreSqlInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/PostgreSqlInitializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/FlatsDao.java" afterPath="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/mysql/MySqlFlatsDao.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,11 +16,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="herokudb.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/herokudb.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -82,19 +42,6 @@
             <state relative-caret-position="1479">
               <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySqlInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/MySqlInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-              <folding>
-                <marker date="1508587284467" expanded="true" signature="665:691" ph="DROP TABLE I... " />
-                <marker date="1508587284467" expanded="true" signature="761:1224" ph="CREATE TABLE... Flats" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -119,6 +66,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mysql.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mysql.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -153,18 +110,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlatsDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/interfaces/FlatsDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PostgreSqlInitializer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/PostgreSqlInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,12 +130,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlatsController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlatsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="178">
+              <caret line="92" column="66" lean-forward="false" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -256,12 +203,12 @@
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/interfaces/FlatsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/mysql/MySqlFlatsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/MySqlInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/District.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/database/initializers/PostgreSqlInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/postgresql/PostgreSqlFlatsDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java" />
       </list>
     </option>
   </component>
@@ -1312,7 +1259,7 @@
       <workItem from="1508260689245" duration="11350000" />
       <workItem from="1508322486614" duration="1773000" />
       <workItem from="1508324627449" duration="284000" />
-      <workItem from="1508506039831" duration="31755000" />
+      <workItem from="1508506039831" duration="31976000" />
     </task>
     <task id="LOCAL-00001" summary="Flats first commit">
       <created>1508568360885</created>
@@ -1325,7 +1272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107422000" />
+    <option name="totallyTimeSpent" value="107643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -1696,22 +1643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/herokudb.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mysql.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/postgresql.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1751,14 +1682,6 @@
             <marker date="1508587020419" expanded="true" signature="1608:1803" ph="SELECT * FRO... Flats" />
             <marker date="1508587020419" expanded="true" signature="2820:2839" ph="SELECT * FRO... Flats" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1821,11 +1744,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mysql.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/herokudb.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/controllers/FlatsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="92" column="66" lean-forward="false" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
