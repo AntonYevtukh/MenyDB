@@ -56,7 +56,7 @@ public class DbWorker {
             environmentConfig = true;
         }
 
-        if (environmentConfig) {
+        if (!environmentConfig) {
             DB_CONNECTION = properties.getProperty("db.url");
             DB_USER = properties.getProperty("db.user");
             DB_PASSWORD = properties.getProperty("db.password");
