@@ -2,9 +2,10 @@ D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtu
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\model\District.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\database\DbWorker.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\database\PostgreSqlInitializer.java
-D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\controllers\FlatController.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\model\FlatsDao.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\model\SearchParameters.java
+D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\controllers\FlatsController.java
+D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\database\InitData.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\database\DbInitialiser.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\database\MySqlInitializer.java
 D:\Storage\Work\Java\Projects\#ProgUA\JavaProHomework\FlatDB\src\main\java\yevtukh\anton\model\Flat.java
