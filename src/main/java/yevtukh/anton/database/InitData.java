@@ -1,7 +1,5 @@
 package yevtukh.anton.database;
-
-import yevtukh.anton.model.District;
-import yevtukh.anton.model.Flat;
+import yevtukh.anton.model.entities.Dish;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,13 +10,13 @@ import java.util.List;
  */
 public class InitData {
 
-    public final static List<Flat> INITIAL_FLATS = new ArrayList<>();
+    public final static List<Dish> INITIAL_DISHES = new ArrayList<>();
     static {
-        Flat flat1 = new Flat(District.OBOLONSKY, "Pryrichna, 17", 2, 47, 7000);
-        Flat flat2 = new Flat(District.SHEVCHENKIVSKY, "Kudryavskya, 2", 2, 65, 8000);
-        Flat flat3 = new Flat(District.SOLOMYANSKY, "Narodnogo opovchennya, 2", 2, 55, 6000);
-        Flat flat4 = new Flat(District.OBOLONSKY, "Pryrichna, 17", 2, 47, 5000);
-        Flat flat5 = new Flat(District.SHEVCHENKIVSKY, "Khrestyatyk, 3", 4, 100, 25000);
-        INITIAL_FLATS.addAll(Arrays.asList(flat1, flat2, flat3, flat4, flat5));
+        Dish dish1 = new Dish(0, "Hamburger", 150, 20.00, 0);
+        Dish dish2 = new Dish(0, "Cheeseburger", 160, 25.00, 0);
+        Dish dish3 = new Dish(0, "BigMac", 230, 45.00, 0);
+        Dish dish4 = new Dish(0, "BigTasty", 450, 70.00, 5);
+        Dish dish5 = new Dish(0, "ChickenRoll", 250, 50.00, 10);
+        INITIAL_DISHES.addAll(Arrays.asList(dish1, dish2, dish3, dish4, dish5));
     }
 }

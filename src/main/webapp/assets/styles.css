@@ -189,7 +189,7 @@ label {
     display: inline-block;
     box-sizing: border-box;
     margin: 5px 5px;
-    width: 16%;
+    width: 20%;
     font-weight: 700;
     color: #3B5998;
 }
@@ -209,12 +209,16 @@ input, select {
     font-family: 'Ubuntu', sans-serif;
     display: inline-block;
     box-sizing: border-box;
-    width: 30%;
+    width: 25%;
     font-weight: 700;
     border: 2px solid #3B5998;
     margin: 5px 5px;
     height: 24px;
     padding-left: 5px;
+}
+
+.input_number {
+    text-align: right;
 }
 
 input:active, input:focus, select:active, select:focus {
@@ -315,4 +319,9 @@ th {
     border: 2px solid rgba(178, 34, 34, 1);
     background-color: rgba(178, 34, 34, 0.25);
     color: rgba(178, 34, 34, 1);
+}
+
+.checkbox {
+    color: #3B5998;
+    width: auto;
 }

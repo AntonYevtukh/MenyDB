@@ -1,12 +1,10 @@
 package yevtukh.anton.database;
 
-import yevtukh.anton.database.initializers.DbInitialiser;
-import yevtukh.anton.database.initializers.MySqlInitializer;
-import yevtukh.anton.database.initializers.PostgreSqlInitializer;
-import yevtukh.anton.model.dao.implementations.mysql.MySqlFlatsDao;
-import yevtukh.anton.model.dao.implementations.postgresql.PostgreSqlFlatsDao;
-import yevtukh.anton.model.dao.interfaces.FlatsDao;
+import yevtukh.anton.model.dao.implementations.JpaDishesDao;
+import yevtukh.anton.model.dao.interfaces.DishesDao;
 
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
@@ -16,11 +14,7 @@ import java.util.Properties;
  */
 public class DbWorker {
 
-    private final String DB_CONNECTION;
-    private final String DB_USER;
-    private final String DB_PASSWORD;
-    private final String DBMS_NAME;
-    private final boolean DROP;
+    private final EntityManagerFactory ENTITY_MANAGER_FACTORY;
     private static DbWorker instance;
 
     public static DbWorker getInstance() {
@@ -37,78 +31,42 @@ public class DbWorker {
 
     private DbWorker()
             throws Exception {
+
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("db.properties");
         Properties properties = new Properties();
         properties.load(inputStream);
 
-        DBMS_NAME = properties.getProperty("dbms.name");
+        boolean runtimeConfig = "1".equals(properties.getProperty("runtime_config")) ? true : false;
+        boolean fill = "1".equals(properties.getProperty("fill")) ? true : false;
 
-        boolean drop;
-        try {
-            drop = Integer.parseInt(properties.getProperty("db.drop")) == 1 ? true : false;
-        } catch (IllegalArgumentException | NullPointerException e) {
-            drop = true;
-        }
-        DROP = drop;
-
-        boolean environmentConfig;
-        try {
-            environmentConfig = Integer.parseInt(properties.getProperty("db.environment_config")) == 1 ? true : false;
-        } catch (IllegalArgumentException | NullPointerException e) {
-            environmentConfig = false;
+        if (runtimeConfig) {
+            properties.put("javax.persistence.jdbc.url", System.getenv("JDBC_DATABASE_URL"));
+            properties.put("javax.persistence.jdbc.user", System.getenv("JDBC_DATABASE_USERNAME"));
+            properties.put("javax.persistence.jdbc.password", System.getenv("JDBC_DATABASE_PASSWORD"));
         }
 
-        if (!environmentConfig) {
-            DB_CONNECTION = properties.getProperty("db.url");
-            DB_USER = properties.getProperty("db.user");
-            DB_PASSWORD = properties.getProperty("db.password");
-        } else {
-            DB_CONNECTION = System.getenv("JDBC_DATABASE_URL");
-            DB_USER = System.getenv("JDBC_DATABASE_USERNAME");
-            DB_PASSWORD = System.getenv("JDBC_DATABASE_PASSWORD");
+        ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory(
+                properties.getProperty("dbms_name"), properties);
+
+        if (fill) {
+            fillDb();
         }
     }
 
-    public void initDB()
-            throws SQLException, ClassNotFoundException {
-        getDbInitializer().initDB(DROP);
-    }
-
-    public Connection getConnection()
+    public DishesDao createDishesDao()
             throws SQLException {
-        return DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
+        return new JpaDishesDao(ENTITY_MANAGER_FACTORY.createEntityManager());
     }
 
-    public FlatsDao createFlatsDao()
-            throws SQLException {
-        switch (DBMS_NAME) {
-            case "mysql":
-                return new MySqlFlatsDao(getConnection());
-            case "postgresql":
-                return new PostgreSqlFlatsDao(getConnection());
-            default:
-                throw new SQLException("Database management system is not supported");
-        }
-    }
-
-    public void fillDb()
+    private void fillDb()
             throws SQLException, ClassNotFoundException {
-        if (InitData.INITIAL_FLATS != null) {
-            FlatsDao flatsDao = createFlatsDao();
-            flatsDao.insertFlats(InitData.INITIAL_FLATS);
-            flatsDao.closeConnection();
+        if (InitData.INITIAL_DISHES != null) {
+            DishesDao dishesDao = createDishesDao();
+            dishesDao.insertDishes(InitData.INITIAL_DISHES);
         }
     }
 
-    public DbInitialiser getDbInitializer()
-            throws SQLException, ClassNotFoundException {
-        switch (DBMS_NAME) {
-            case "mysql":
-                return new MySqlInitializer();
-            case "postgresql":
-                return new PostgreSqlInitializer();
-            default:
-                throw new SQLException("Database management system is not supported");
-        }
+    public void stop() {
+        ENTITY_MANAGER_FACTORY.close();
     }
 }

@@ -9,11 +9,20 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>FlatServlet</servlet-name>
-    <servlet-class>yevtukh.anton.controllers.FlatsController</servlet-class>
+    <servlet-name>MenuServlet</servlet-name>
+    <servlet-class>yevtukh.anton.controllers.MenuController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>FlatServlet</servlet-name>
-    <url-pattern>/flats</url-pattern>
+    <servlet-name>MenuServlet</servlet-name>
+    <url-pattern>/menu</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>yevtukh.anton.controllers.AdminController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/admin</url-pattern>
   </servlet-mapping>
 </web-app>
