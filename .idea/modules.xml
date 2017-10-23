@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FlatDB.iml" filepath="$PROJECT_DIR$/FlatDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MenuDB.iml" filepath="$PROJECT_DIR$/MenuDB.iml" />
     </modules>
   </component>
 </project>
