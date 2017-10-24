@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="31" column="17" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
+              <caret line="31" column="17" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbWorker.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
+              <caret line="70" column="5" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
               <folding>
                 <element signature="e#2224#2225#0" expanded="true" />
                 <element signature="e#2270#2271#0" expanded="true" />
@@ -94,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/interfaces/DishesDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="37" />
+              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -104,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/JpaDishesDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-199">
-              <caret line="105" column="10" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="105" selection-end-column="10" />
+              <caret line="105" column="10" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="105" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1250,7 +1250,7 @@
       <workItem from="1508790805487" duration="5155000" />
       <workItem from="1508798280064" duration="3966000" />
       <workItem from="1508802364240" duration="1600000" />
-      <workItem from="1508849695937" duration="3416000" />
+      <workItem from="1508849695937" duration="3640000" />
     </task>
     <task id="LOCAL-00001" summary="Flats first commit">
       <created>1508568360885</created>
@@ -1287,15 +1287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1508856516426</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Menu final commit">
+      <created>1508856539793</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1508856539793</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174103000" />
+    <option name="totallyTimeSpent" value="174327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1320,7 +1326,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30161053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30161053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1650,7 +1656,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="31" column="17" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
+          <caret line="31" column="17" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1666,7 +1672,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/implementations/JpaDishesDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-199">
-          <caret line="105" column="10" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="105" selection-end-column="10" />
+          <caret line="105" column="10" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="105" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1694,7 +1700,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/model/dao/interfaces/DishesDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="37" />
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1702,7 +1708,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/yevtukh/anton/database/DbWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="70" column="5" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
+          <caret line="70" column="5" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
           <folding>
             <element signature="e#2224#2225#0" expanded="true" />
             <element signature="e#2270#2271#0" expanded="true" />
