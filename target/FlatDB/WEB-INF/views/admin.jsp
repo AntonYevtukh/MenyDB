@@ -31,7 +31,7 @@
                            value="${weight}"><br>
                     <label class="input_label">Price</label>
                     <input type="number" name="price" min="0" step="0.01"
-                           value="<fmt:formatNumber type = "number" pattern="###.00" value="${price}"/>">
+                           value="<fmt:formatNumber type = "number" pattern="##0.00" value="${price}"/>">
                     <label class="input_label">Discount</label>
                     <input type="number" name="discount" min="0" max="100"
                            value="${discount == null ? '0' : discount}">
@@ -65,11 +65,11 @@
                                 <td><c:out value="${dish.name}"/></td>
                                 <td align="right"><c:out value="${dish.weight}"/></td>
                                 <td align="right">
-                                    <fmt:formatNumber type = "number" pattern="###.00" value="${dish.price}"/>
+                                    <fmt:formatNumber type = "number" pattern="##0.00" value="${dish.price}"/>
                                 </td>
                                 <td align="right"><c:out value="${dish.discount}"/>%</td>
                                 <td align="right">
-                                    <fmt:formatNumber type = "number" pattern="###.00" value="${dish.getActualPrice()}"/>
+                                    <fmt:formatNumber type = "number" pattern="##0.00" value="${dish.getActualPrice()}"/>
                                 </td>
                             </tr>
                         </c:forEach>
