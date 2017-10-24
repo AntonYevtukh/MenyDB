@@ -46,7 +46,7 @@ public class DbWorker {
         }
 
         ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory(
-                properties.getProperty("dbms_name"), properties);
+                properties.getProperty("dbms.name"), properties);
 
         if (fill) {
             fillDb();
