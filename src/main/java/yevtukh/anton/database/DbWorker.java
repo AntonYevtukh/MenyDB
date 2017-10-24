@@ -36,13 +36,13 @@ public class DbWorker {
         Properties properties = new Properties();
         properties.load(inputStream);
 
-        boolean runtimeConfig = "1".equals(properties.getProperty("runtime_config")) ? true : false;
-        boolean fill = "1".equals(properties.getProperty("fill")) ? true : false;
+        boolean runtimeConfig = "1".equals(properties.getProperty("db.runtime_config")) ? true : false;
+        boolean fill = "1".equals(properties.getProperty("db.fill")) ? true : false;
 
         if (runtimeConfig) {
-            properties.put("javax.persistence.jdbc.url", System.getenv("JDBC_DATABASE_URL"));
-            properties.put("javax.persistence.jdbc.user", System.getenv("JDBC_DATABASE_USERNAME"));
-            properties.put("javax.persistence.jdbc.password", System.getenv("JDBC_DATABASE_PASSWORD"));
+            properties.put("javax.persistence.jdbc.url", System.getenv(properties.getProperty("system.db.url")));
+            properties.put("javax.persistence.jdbc.user", System.getenv(properties.getProperty("system.db.user")));
+            properties.put("javax.persistence.jdbc.password", System.getenv(properties.getProperty("system.db.password")));
         }
 
         ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory(
