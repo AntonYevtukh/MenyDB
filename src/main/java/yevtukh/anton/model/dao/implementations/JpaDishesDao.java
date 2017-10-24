@@ -1,12 +1,11 @@
 package yevtukh.anton.model.dao.implementations;
 
+import org.hibernate.exception.ConstraintViolationException;
 import yevtukh.anton.model.SearchParameters;
 import yevtukh.anton.model.dao.interfaces.DishesDao;
 import yevtukh.anton.model.entities.Dish;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityNotFoundException;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -27,6 +26,10 @@ public class JpaDishesDao implements DishesDao {
         try {
             entityManager.persist(dish);
             entityManager.getTransaction().commit();
+        } catch (RollbackException e) {
+            entityManager.getTransaction().rollback();
+            e.printStackTrace();
+            throw e;
         } catch (Exception e) {
             entityManager.getTransaction().rollback();
             e.printStackTrace();
@@ -35,8 +38,20 @@ public class JpaDishesDao implements DishesDao {
 
     @Override
     public void insertDishes(List<Dish> dishes){
-        for (Dish dish : dishes)
-            insertDish(dish);
+        entityManager.getTransaction().begin();
+        try {
+            for (Dish dish : dishes) {
+                entityManager.persist(dish);
+            }
+            entityManager.getTransaction().commit();
+        } catch (RollbackException e) {
+            entityManager.getTransaction().rollback();
+            e.printStackTrace();
+            throw e;
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -51,6 +66,10 @@ public class JpaDishesDao implements DishesDao {
         try {
             entityManager.merge(dish);
             entityManager.getTransaction().commit();
+        } catch (RollbackException e) {
+            entityManager.getTransaction().rollback();
+            e.printStackTrace();
+            throw e;
         } catch (Exception e) {
             entityManager.getTransaction().rollback();
             e.printStackTrace();

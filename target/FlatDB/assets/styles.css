@@ -322,6 +322,6 @@ th {
 }
 
 .checkbox {
-    color: #3B5998;
-    width: auto;
+    width: 16px;
+    transform: translateY(7px);
 }

@@ -1,12 +1,13 @@
 package yevtukh.anton.controllers;
 
+import org.hibernate.exception.ConstraintViolationException;
 import yevtukh.anton.database.DbWorker;
 import yevtukh.anton.model.District;
-import yevtukh.anton.model.SearchParameters;
 import yevtukh.anton.model.dao.interfaces.DishesDao;
 import yevtukh.anton.model.entities.Dish;
-
+import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.RollbackException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,9 +55,11 @@ public class AdminController extends HttpServlet {
 
         try (DishesDao dishesDao = DB_WORKER.createDishesDao()){
             dishesDao.insertDish(parseDish(req));
-            List<Dish> dishes = dishesDao.selectAllDishes();
             req.setAttribute("success_message", "Dish successfully added");
-            req.setAttribute("dishes", dishes);
+        } catch (RollbackException e) {
+            req.setAttribute("error_message", "Dish name should be unique");
+            System.err.println("Unable to insert the Dish into table");
+            e.printStackTrace();
         } catch (SQLException e) {
             req.setAttribute("error_message", "Internal SQL error");
             System.err.println("Unable to insert the Dish into table");
@@ -66,8 +69,7 @@ public class AdminController extends HttpServlet {
             System.err.println("Unable to parse search parameters");
             e.printStackTrace();
         } finally {
-            setPreviousRequestParameters(req);
-            req.getRequestDispatcher("/WEB-INF/views/admin.jsp").forward(req, resp);
+            getDishes(req, resp);
         }
     }
 
@@ -76,9 +78,11 @@ public class AdminController extends HttpServlet {
 
         try (DishesDao dishesDao = DB_WORKER.createDishesDao()){
             dishesDao.updateDish(parseDish(req));
-            List<Dish> dishes = dishesDao.selectAllDishes();
-            req.setAttribute("success_message", "Dish successfully added");
-            req.setAttribute("dishes", dishes);
+            req.setAttribute("success_message", "Dish successfully updated");
+        } catch (RollbackException e) {
+            req.setAttribute("error_message", "Dish name should be unique");
+            System.err.println("Unable to insert the Dish into table");
+            e.printStackTrace();
         } catch (SQLException e) {
             req.setAttribute("error_message", "Internal SQL error");
             System.err.println("Unable to insert the Dish into table");
@@ -93,8 +97,7 @@ public class AdminController extends HttpServlet {
             e.printStackTrace();
         }
         finally {
-            setPreviousRequestParameters(req);
-            req.getRequestDispatcher("/WEB-INF/views/admin.jsp").forward(req, resp);
+            getDishes(req, resp);
         }
     }
 
@@ -102,9 +105,7 @@ public class AdminController extends HttpServlet {
             throws IOException, ServletException {
         try (DishesDao dishesDao = DB_WORKER.createDishesDao()){
             dishesDao.deleteDish(Integer.parseInt(req.getParameter("id")));
-            List<Dish> dishes = dishesDao.selectAllDishes();
-            req.setAttribute("success_message", "Dish successfully added");
-            req.setAttribute("dishes", dishes);
+            req.setAttribute("success_message", "Dish successfully deleted");
         } catch (SQLException e) {
             req.setAttribute("error_message", "Internal SQL error");
             System.err.println("Unable to insert the Dish into table");
@@ -118,8 +119,7 @@ public class AdminController extends HttpServlet {
             System.err.println("Unable to parse search parameters");
             e.printStackTrace();
         } finally {
-            setPreviousRequestParameters(req);
-            req.getRequestDispatcher("/WEB-INF/views/admin.jsp").forward(req, resp);
+            getDishes(req, resp);
         }
     }
 
@@ -127,12 +127,9 @@ public class AdminController extends HttpServlet {
             throws IOException, ServletException {
 
         try (DishesDao dishesDao = DB_WORKER.createDishesDao()){
-
             List<Dish> dishes = dishesDao.selectAllDishes();
-            req.setAttribute("success_message", "Dishes successfully found");
             req.setAttribute("dishes", dishes);
         } catch (SQLException e) {
-            req.setAttribute("error_message", "Internal SQL error");
             System.err.println("Unable to get Dishes");
             e.printStackTrace();
         } finally {
@@ -159,6 +156,7 @@ public class AdminController extends HttpServlet {
         if (withDetails) {
             try (DishesDao dishesDao = DB_WORKER.createDishesDao()) {
                 dish = dishesDao.findDish(Integer.parseInt(req.getParameter("id")));
+                withDetails = dish == null ? false : true;
             } catch (SQLException | IllegalArgumentException e) {
                 withDetails = false;
             }
