@@ -65,6 +65,7 @@
                     </table>
                 </div>
             </c:if>
+            <a class="left" href="/"><button type="button" class="button">Back</button></a>
         </div>
     </div>
     <%@ include file="partials/footer.jsp"%>
